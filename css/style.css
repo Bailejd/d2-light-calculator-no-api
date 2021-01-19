@@ -1,0 +1,174 @@
+@media only screen and (max-width: 900px) {
+  .item img {
+    width: 50px;
+  }
+
+  .middle-container {
+    display: grid;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". stats helmet ."
+      ". kinetic arm ."
+      ". energy chest ."
+      ". power leg ."
+      ". artifact class-item .";
+  }
+
+  .item p {
+    margin: 0;
+  }
+
+  .item input[type="number"] {
+    font-size: 16px;
+  }
+
+  #stats {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .item img {
+    width: 100px;
+  }
+
+  .middle-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". stats helmet ."
+      ". kinetic arm ."
+      ". energy chest ."
+      ". power leg ."
+      ". artifact class-item .";
+  }
+
+  #stats {
+    font-size: 20px;
+  }
+}
+
+:root {
+  --primary: #444444;
+  --dark: #333333;
+  --light: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #cccccc;
+  margin: 0 5%;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#display-name {
+  margin: 10px 0;
+}
+
+#character-list {
+  margin-bottom: 5px;
+}
+
+#over-level-message {
+  color: red;
+}
+
+/* Top Container */
+.platform {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6em 1.3em;
+  text-decoration: none;
+  border: 0;
+}
+
+.emblem-btn {
+  border: none;
+  background-color: #cccccc;
+}
+
+/* Middle Container */
+#stats {
+  grid-area: stats;
+  align-self: center;
+}
+
+#kinetic {
+  grid-area: kinetic;
+}
+
+#energy {
+  grid-area: energy;
+}
+
+#power {
+  grid-area: power;
+}
+
+#artifact {
+  grid-area: artifact;
+}
+
+#helmet {
+  grid-area: helmet;
+}
+
+#arm {
+  grid-area: arm;
+}
+
+#chest {
+  grid-area: chest;
+}
+
+#leg {
+  grid-area: leg;
+}
+
+#class-item {
+  grid-area: class-item;
+}
+
+/* Chrome/Edge/IE */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input.light-input,
+input.artifact-input {
+  text-align: center;
+  margin-bottom: 5px;
+  border: none;
+  background-color: var(--dark);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.64em;
+  width: 50%;
+}
+
+/* Bottom Container */

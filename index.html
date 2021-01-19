@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Non API Version</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top-container">
+        <h1>Destiny Light Level</h1>
+        <div class="form-group">
+          <input type="text" id="search" placeholder="Enter account name" />
+          <select id="platform-select" name="platform" required>
+            <option value="" disabled selected hidden>Select Platform</option>
+            <option value="1">Xbox</option>
+            <option value="2">Playstation</option>
+            <option value="3">Steam</option>
+            <option value="4">Blizzard</option>
+          </select>
+          <button class="search-button" onclick="searchPlayer()">Search</button>
+        </div>
+        <div id="search-error"></div>
+        <div id="character-list">
+          <h2 id="display-name">Example Account</h2>
+          <div class="emblem">
+            <button class="emblem-btn" onclick="displayInventory()">
+              <img src="images/Hunters-Wit.jpg" />
+            </button>
+          </div>
+          <div class="emblem">
+            <button class="emblem-btn" onclick="displayInventory()">
+              <img src="images/Titans-Pride.jpg" />
+            </button>
+          </div>
+          <div class="emblem">
+            <button class="emblem-btn" onclick="displayInventory()">
+              <img src="images/Warlocks-Flight.jpg" />
+            </button>
+          </div>
+        </div>
+        <div id="loading-inventory"></div>
+        <div id="over-level-message"></div>
+      </div>
+      <div class="middle-container">
+        <div class="item" id="stats">
+          <div id="character-stats">
+            <p id="light-level"><strong>BPL: 1245</strong></p>
+            <p><strong>With Artifact: 1265</strong></p>
+          </div>
+        </div>
+        <div class="item" id="kinetic">
+          <img src="images/Kinetic.jpg" alt="" />
+          <div>
+            <p>Kinetic:</p>
+            <input
+              class="light-input"
+              id="kinetic-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="energy">
+          <img src="images/Energy.jpg" alt="" />
+          <div>
+            <p>Energy:</p>
+            <input
+              class="light-input"
+              id="energy-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="power">
+          <img src="images/Power.jpg" alt="" />
+          <div>
+            <p>Power:</p>
+            <input
+              class="light-input"
+              id="power-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="artifact">
+          <img src="images/Artifact.jpg" alt="" />
+          <div>
+            <p>Artifact:</p>
+            <input
+              class="artifact-input"
+              id="artifact-light"
+              type="number"
+              value="20"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="helmet">
+          <img src="images/Helmet.jpg" alt="" />
+          <div>
+            <p>Helmet:</p>
+            <input
+              class="light-input"
+              id="helmet-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="arm">
+          <img src="images/Arm.jpg" alt="" />
+          <div>
+            <p>Arms:</p>
+            <input
+              class="light-input"
+              id="arm-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="chest">
+          <img src="images/Chest.jpg" alt="" />
+          <div>
+            <p>Chest:</p>
+            <input
+              class="light-input"
+              id="chest-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="leg">
+          <img src="images/Leg.jpg" alt="" />
+          <div>
+            <p>Legs:</p>
+            <input
+              class="light-input"
+              id="leg-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+        <div class="item" id="class-item">
+          <img src="images/Cloak.jpg" alt="" />
+          <div>
+            <p>Class:</p>
+            <input
+              class="light-input"
+              id="class-light"
+              type="number"
+              value="1245"
+              onblur="calcLevel()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="bottom-container">
+        <hr />
+        <div class="item" id="summary">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            doloremque, fugit quis ab, veritatis consequuntur quidem aperiam
+            reprehenderit laudantium neque nesciunt nostrum obcaecati
+            voluptatibus saepe. Unde excepturi, culpa pariatur aut tempore totam
+            voluptatibus exercitationem, illo qui quidem labore. Iste ab
+            doloremque aut possimus? Totam, delectus.
+          </p>
+        </div>
+        <ul>
+          <li>Blue Engrams: +0</li>
+          <li>
+            Powerfuls: +3, +4, +5 (less than 1250): +0 (greater than 1250)
+          </li>
+          <li>Weak Pinnacles: +4 (less than 1250): +1 (greater than 1250)</li>
+          <li>Pinnacles: +5 (less than 1250): +2 (greater than 1250)</li>
+        </ul>
+      </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="js/config.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
