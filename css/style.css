@@ -64,6 +64,7 @@ html {
 body {
   background: #cccccc;
   margin: 0 5%;
+  margin-bottom: 10%;
   text-align: center;
 }
 
@@ -78,6 +79,11 @@ ul {
 
 button:hover {
   cursor: pointer;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #display-name {
