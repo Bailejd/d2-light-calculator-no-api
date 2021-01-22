@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Non API Version</title>
   </head>
-  <body>
+  <body onload="calcLevel()">
     <div class="wrapper">
       <div class="top-container">
         <h1>Destiny Light Level</h1>
@@ -47,8 +47,10 @@
       <div class="middle-container">
         <div class="item" id="stats">
           <div id="character-stats">
-            <p id="light-level"><strong>BPL: 1200</strong></p>
-            <p><strong>With Artifact: 1220</strong></p>
+            <p id="label">Base Power Level:</p>
+            <p id="light-level"></p>
+            <p id="label">With Artifact:</p>
+            <p id="light-level"></p>
           </div>
         </div>
         <div class="item" id="kinetic">

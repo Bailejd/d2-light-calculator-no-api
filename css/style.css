@@ -113,6 +113,17 @@ table {
 }
 
 /* Middle Container */
+p#label {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+p#light-level {
+  margin-top: 0;
+  /* text-shadow:; */
+  font-style: italic;
+}
+
 #stats {
   grid-area: stats;
   align-self: center;
