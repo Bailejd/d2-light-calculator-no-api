@@ -62,8 +62,10 @@ function calcLevel() {
     }
 
     lightLevel.innerHTML = `
-    <p id="light-level"><strong>BPL: ${Math.trunc(avgLevel)}</strong></p>
-    <p><strong>With Artifact: ${Math.trunc(avgLevel + parseFloat(artifactInput.value))}</strong></p>
+    <p id=label>Base Power Level:</p>
+    <p id="light-level">${avgLevel.toFixed(2)}</p>
+    <p id="label">With Artifact</p>
+    <p id="light-level">${Math.trunc(avgLevel + parseFloat(artifactInput.value))}</p>
     `;
 
     calcDrops(Math.trunc(avgLevel));
