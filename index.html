@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Non API Version</title>
   </head>
@@ -223,11 +224,17 @@
             </tbody>
           </table>
           <p>
-            <small
-              >These drop values may not be completely accurate.<br />I am still
-              researching how drop power levels are decided based on your Base
-              Power Level.</small
-            >
+            <small>
+              These drop values may not be completely accurate.
+              <br />
+              Since exact values are not given in game, these values are
+              estimates based on your Base Power Level.
+              <br />
+              Also keep in mind Blue and Legendary drops can drop a few levels
+              below your Base Power Level. This table and the following chart
+              show the maximum possible values for Blue and Legendary drops
+              since they are easily obtained through normal gameplay.
+            </small>
           </p>
           <hr />
           <p>
@@ -236,7 +243,13 @@
               based on how many items are above or below your base power level.
             </strong>
           </p>
-          <p style="color: red">Work in progress</p>
+          <p style="color: red">
+            Work in progress. This chart will likely change as I look for better
+            ways to display this data.
+          </p>
+          <div id="display">
+            <canvas id="myChart" width="400" height="400"></canvas>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
             doloremque, fugit quis ab, veritatis consequuntur quidem aperiam
